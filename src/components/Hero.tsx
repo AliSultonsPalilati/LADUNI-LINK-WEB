@@ -1,5 +1,3 @@
-// src/components/ui/Hero.tsx
-
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-laduni.jpg";
 
@@ -7,7 +5,8 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center text-center p-4 md:p-8 overflow-hidden"
+      // Tambahkan margin vertikal (py) ekstra untuk memberi 'ruang napas' di HP
+      className="relative min-h-screen flex items-center justify-center text-center py-24 px-4 md:p-8 overflow-hidden" 
     >
       {/* ... Gambar Latar & Overlay ... */}
       <div
@@ -24,15 +23,17 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          // 1. Ini menggunakan "font awal" (font-bold)
+          // Ukuran di HP: Dibuat lebih kecil (text-4xl atau 5xl)
           className="text-4xl md:text-5xl font-bold text-stone-100 mb-4 leading-tight drop-shadow-lg"
         >
           Selamat Datang di<br />
           
-          {/* 2. Ini menggunakan "font yang Anda mau" (Playfair Display) */}
+          {/* 2. Nama Restoran */}
           <span 
             style={{ color: '#227157' }} 
-            className="text-[#227157] font-['Playfair_Display'] font-bold text-6xl md:text-8xl"
+            // UKURAN MOBILE DIKECILKAN: text-6xl (sebelumnya 6xl) -> text-5xl
+            // Ukuran Desktop tetap besar: md:text-8xl
+            className="text-[#227157] font-['Playfair_Display'] font-bold text-5xl md:text-8xl"
           >
             Rumah Makan Laduni
           </span>
