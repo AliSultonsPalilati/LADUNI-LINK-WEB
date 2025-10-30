@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Proyek Website Rumah Makan Laduni
 
-## Project info
+Ini adalah repositori kode untuk website Rumah Makan Laduni. Proyek ini berfungsi sebagai halaman link-menu, lokasi, dan kontak untuk pelanggan.
 
-**URL**: https://lovable.dev/projects/c6176396-b8c4-4e24-94e4-70a6a1e9caf1
+Proyek ini dibuat dan dikelola oleh **Alisultn**.
 
-## How can I edit this code?
+## 🚀 Cara Menjalankan Proyek Secara Lokal
 
-There are several ways of editing your application.
+Jika Anda ingin mengedit atau menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berikut.
 
-**Use Lovable**
+**Persyaratan:**
+* Node.js (Disarankan versi LTS)
+* npm (Biasanya terinstal bersama Node.js)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c6176396-b8c4-4e24-94e4-70a6a1e9caf1) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+**Langkah-langkah Instalasi:**
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 1. Clone repositori ini ke komputer Anda
+git clone <URL_GIT_ANDA>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Masuk ke direktori proyek
+cd <NAMA_FOLDER_PROYEK_ANDA>
 
-# Step 3: Install the necessary dependencies.
+# 3. Install semua dependensi yang dibutuhkan
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Jalankan server pengembangan (development server)
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+🛠️ Teknologi yang Digunakan
+Proyek ini dibangun menggunakan tumpukan teknologi frontend modern, termasuk:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Vite
 
-**Use GitHub Codespaces**
+TypeScript
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+React
 
-## What technologies are used for this project?
+shadcn-ui
 
-This project is built with:
+Tailwind CSS
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c6176396-b8c4-4e24-94e4-70a6a1e9caf1) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Framer Motion (untuk animasi)
