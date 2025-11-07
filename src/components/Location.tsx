@@ -24,10 +24,12 @@ const Location = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-stone-100 mb-4">
+          {/* --- PERUBAHAN FONT: Judul Utama --- */}
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-100 mb-4">
             Lokasi Cabang
           </h2>
-          <p className="text-stone-300 text-lg">
+          {/* --- PERUBAHAN FONT: Subtitle --- */}
+          <p className="text-stone-300 text-sm md:text-base lg:text-lg">
             Kunjungi restoran kami di lokasi terdekat
           </p>
         </motion.div>
@@ -42,10 +44,12 @@ const Location = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="mb-4">
-                <h3 className="text-2xl font-bold text-stone-100 mb-2">
+                {/* --- PERUBAHAN FONT: Judul Cabang --- */}
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-stone-100 mb-2">
                   {location.name}
                 </h3>
-                <p className="text-stone-400">{location.address}</p>
+                {/* --- PERUBAHAH FONT: Alamat --- */}
+                <p className="text-stone-400 text-sm md:text-base">{location.address}</p>
               </div>
               
               <div className="overflow-hidden rounded-lg shadow-xl border border-stone-700">
@@ -54,9 +58,7 @@ const Location = () => {
                   width="100%"
                   height="450"
                   style={{ border: 0 }}
-                  // --- PERBAIKAN DI SINI ---
                   allowFullScreen={true} 
-                  // -------------------------
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>

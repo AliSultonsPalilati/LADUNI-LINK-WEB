@@ -13,10 +13,12 @@ const MenuItem = ({ name, price, type }) => {
   return (
     <div className="flex justify-between items-center py-2 border-b border-stone-700/50 hover:bg-stone-800/50 transition-colors px-2 -mx-2">
       <div className="text-left flex-1">
-        <h4 className="text-stone-100 font-medium md:text-lg">{name}</h4>
+        {/* --- PERUBAHAN FONT: Nama Item --- */}
+        <h4 className="text-stone-100 font-medium text-base md:text-lg">{name}</h4>
         <p className="text-stone-500 text-xs mt-0.5">{type}</p>
       </div>
-      <span className="text-[#227157] font-semibold text-lg flex items-center gap-1 flex-shrink-0">
+      {/* --- PERUBAHAN FONT: Harga --- */}
+      <span className="text-[#227157] font-semibold text-base md:text-lg flex items-center gap-1 flex-shrink-0">
         <DollarSign className="w-4 h-4 text-stone-500" /> {priceDisplay}K
       </span>
     </div>
@@ -26,7 +28,8 @@ const MenuItem = ({ name, price, type }) => {
 // Komponen Pembantu untuk seluruh daftar (kolom)
 const MenuListColumn = ({ title, data, className = "" }) => (
   <div className={`p-6 bg-stone-800 rounded-xl shadow-2xl h-full ${className}`}>
-    <h3 className="text-3xl font-bold text-[#227157] mb-6 border-b-2 border-[#227157]/50 pb-2">
+    {/* --- PERUBAHAN FONT: Judul Kolom --- */}
+    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#227157] mb-6 border-b-2 border-[#227157]/50 pb-2">
       {title}
     </h3>
     <div className="space-y-1">
@@ -49,10 +52,12 @@ const MenuLinks = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-100 mb-4">
+          {/* --- PERUBAHAN FONT: Judul Utama --- */}
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-stone-100 mb-4">
             Daftar Menu
           </h2>
-          <p className="text-stone-300 text-lg">
+          {/* --- PERUBAHAN FONT: Subtitle --- */}
+          <p className="text-stone-300 text-sm md:text-base lg:text-lg">
             Nikmati pilihan masakan terbaik dari dapur kami. Harga dalam Ribuan Rupiah (K).
           </p>
         </motion.div>
@@ -65,7 +70,7 @@ const MenuLinks = () => {
             transition={{ duration: 0.8 }}
             className="mb-12"
         >
-            <MenuListColumn title="MASAKAN UTAMA" data={[...menuMakanan, ...menuIkan]} />
+          <MenuListColumn title="MASAKAN UTAMA" data={[...menuMakanan, ...menuIkan]} />
         </motion.div>
 
 
@@ -76,10 +81,10 @@ const MenuLinks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
         >
-            <div className="grid md:grid-cols-2 gap-8">
-                <MenuListColumn title="SNACK & JAJANAN" data={menuSnack} />
-                <MenuListColumn title="MINUMAN & KOPI" data={menuMinuman} />
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <MenuListColumn title="SNACK & JAJANAN" data={menuSnack} />
+            <MenuListColumn title="MINUMAN & KOPI" data={menuMinuman} />
+          </div>
         </motion.div>
 
       </div>

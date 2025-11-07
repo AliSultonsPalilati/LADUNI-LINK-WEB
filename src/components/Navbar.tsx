@@ -14,24 +14,35 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Fungsi scroll yang sudah kita perbaiki (dengan offset)
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const headerHeight = 80; // Offset
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+      
       setIsOpen(false);
     }
   };
 
+  // --- PERBAIKAN DI SINI: Menambahkan "Lokasi" ---
   const menuItems = [
     { label: "Beranda", id: "hero" },
     { label: "Menu", id: "menu" },
+    { label: "Lokasi", id: "location" }, // Ditambahkan sesuai file Location.tsx
     { label: "Kontak", id: "contact" },
   ];
+  // ---------------------------------------------
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        // Latar belakang diubah menjadi coklat gelap hangat (stone)
         isScrolled || isOpen
           ? "bg-stone-900/90 backdrop-blur-md shadow-lg"
           : "bg-transparent"
@@ -43,8 +54,8 @@ const Navbar = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            // Teks logo diubah menjadi putih hangat
-            className="text-2xl font-bold text-stone-100 cursor-pointer"
+            // Font sudah diperbaiki
+            className="text-lg md:text-xl lg:text-2xl font-bold text-stone-100 cursor-pointer"
             onClick={() => scrollToSection("hero")}
           >
             Rumah Makan Laduni
@@ -61,8 +72,8 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                // Teks link diubah menjadi krem pudar
-                className="text-stone-300 hover:text-[#227157] transition-colors duration-300 font-medium relative group"
+                // Font sudah diperbaiki
+                className="text-sm md:text-base text-stone-300 hover:text-[#227157] transition-colors duration-300 font-medium relative group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#227157] group-hover:w-full transition-all duration-300" />
@@ -72,7 +83,6 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            // Ikon diubah menjadi krem pudar
             className="md:hidden text-stone-300 hover:text-[#227157] transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -89,7 +99,8 @@ const Navbar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 pb-4"
+              // Bug fix z-10 sudah ada
+              className="md:hidden mt-4 pb-4 relative z-10"
             >
               {menuItems.map((item, index) => (
                 <motion.button
@@ -98,8 +109,8 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.id)}
-                  // Teks & hover diubah agar sesuai tema hangat
-                  className="block w-full text-left py-3 text-stone-300 hover:text-[#227157] hover:bg-stone-800/70 rounded-lg px-4 transition-all duration-300"
+                  // Font sudah diperbaiki
+                  className="block w-full text-left py-3 text-base text-stone-300 hover:text-[#227157] hover:bg-stone-800/70 rounded-lg px-4 transition-all duration-300"
                 >
                   {item.label}
                 </motion.button>

@@ -31,11 +31,12 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          {/* 2. Teks diubah jadi gelap agar kontras dengan background terang */}
-          <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
+          {/* --- PERUBAHAN FONT: Judul Utama --- */}
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
             Hubungi Kami
           </h2>
-          <p className="text-stone-700 text-lg">
+          {/* --- PERUBAHAN FONT: Subtitle --- */}
+          <p className="text-stone-700 text-sm md:text-base lg:text-lg">
             Ada pertanyaan? Tim kami siap membantu Anda
           </p>
         </motion.div>
@@ -64,12 +65,12 @@ const Contact = () => {
                       <contact.icon className="w-6 h-6 text-[#227157]" />
                     </div>
                     <div className="text-left">
-                      {/* 5. Teks di dalam card juga diubah jadi gelap */}
-                      <h3 className="text-lg font-semibold text-stone-900 mb-1">
+                      {/* --- PERUBAHAN FONT: Judul Kartu --- */}
+                      <h3 className="text-base md:text-lg font-semibold text-stone-900 mb-1">
                         {contact.name}
                       </h3>
-                      {/* 6. Nomor telepon menggunakan warna hijau aksen */}
-                      <p className="text-[#227157] font-medium">
+                      {/* --- PERUBAHAN FONT: Isi Kartu --- */}
+                      <p className="text-[#227157] font-medium text-sm md:text-base">
                         {contact.number}
                       </p>
                     </div>

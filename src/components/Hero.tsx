@@ -23,17 +23,16 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          // Ukuran di HP: Dibuat lebih kecil (text-4xl atau 5xl)
-          className="text-4xl md:text-5xl font-bold text-stone-100 mb-4 leading-tight drop-shadow-lg"
+          // --- PERUBAHAN FONT: Judul ---
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-stone-100 mb-4 leading-tight drop-shadow-lg"
         >
           Selamat Datang di<br />
           
           {/* 2. Nama Restoran */}
           <span 
             style={{ color: '#227157' }} 
-            // UKURAN MOBILE DIKECILKAN: text-6xl (sebelumnya 6xl) -> text-5xl
-            // Ukuran Desktop tetap besar: md:text-8xl
-            className="text-[#227157] font-['Playfair_Display'] font-bold text-5xl md:text-8xl"
+            // --- PERUBAHAN FONT: Nama Restoran ---
+            className="text-[#227157] font-['Playfair_Display'] font-bold text-4xl md:text-6xl lg:text-8xl"
           >
             Rumah Makan Laduni
           </span>
@@ -44,7 +43,8 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-xl text-stone-300 mb-8 max-w-2xl mx-auto drop-shadow-md"
+          // --- PERUBAHAN FONT: Subtitle ---
+          className="text-base md:text-lg lg:text-xl text-stone-300 mb-8 max-w-2xl mx-auto drop-shadow-md"
         >
           Nikmati kelezatan masakan nusantara dengan cita rasa istimewa yang menggugah selera
         </motion.p>
@@ -57,7 +57,8 @@ const Hero = () => {
         >
           <a
             href="#menu"
-            className="inline-block bg-[#227157] text-stone-100 px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            // --- PERUBAHAN FONT & PADDING: Tombol ---
+            className="inline-block bg-[#227157] text-stone-100 px-6 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Lihat Menu Kami
           </a>
