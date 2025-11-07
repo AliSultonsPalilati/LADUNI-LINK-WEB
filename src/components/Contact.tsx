@@ -5,12 +5,12 @@ import { Card } from "@/components/ui/card";
 const Contact = () => {
   const contacts = [
     {
-      name: "Contact 1",
+      name: "Kontak 1",
       number: "+62 812-4312-0007",
       icon: MessageCircle,
     },
     {
-      name: "Contact 2",
+      name: "Kontak 2",
       number: "+62 851-7519-7923",
       icon: MessageCircle,
     },
