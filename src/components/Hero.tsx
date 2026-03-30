@@ -30,24 +30,6 @@ const Hero = () => {
         }}
       />
 
-      {/* ── Top bar info ── */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
-        className="absolute top-6 left-0 right-0 flex justify-center gap-6 px-4 z-20"
-      >
-        <div className="flex items-center gap-1.5 text-stone-300/80 text-xs tracking-widest uppercase">
-          <MapPin className="w-3 h-3 text-[#227157]" />
-          <span>Masakan Nusantara</span>
-        </div>
-        <div className="w-px h-4 bg-stone-600 self-center" />
-        <div className="flex items-center gap-1.5 text-stone-300/80 text-xs tracking-widest uppercase">
-          <Clock className="w-3 h-3 text-[#227157]" />
-          <span>Buka Setiap Hari</span>
-        </div>
-      </motion.div>
-
       {/* ── Main Content ── */}
       <div className="relative z-10 container mx-auto max-w-5xl px-6">
 
