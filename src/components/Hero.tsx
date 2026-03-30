@@ -165,7 +165,6 @@ const Hero = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1"
       >
         <span className="text-stone-500 text-[10px] tracking-[0.25em] uppercase">
-          Scroll
         </span>
         <motion.div
           animate={{ y: [0, 5, 0] }}
